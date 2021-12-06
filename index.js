@@ -1,6 +1,7 @@
 // get handles and define
 const countNumber = document.querySelector(".count-number");
 const btnContainer = document.querySelector(".btn-container");
+let sqNum = document.querySelector(".sq-btn-container");
 
 // increase function
 const increase = () => {
@@ -19,6 +20,14 @@ const reset = () => {
   countNumber.innerHTML = 0;
   decideColor(+countNumber.innerHTML);
 };
+
+//  square function
+
+const square = () => {
+  console.log(countNumber.innerHTML);
+  countNumber.innerHTML = (+countNumber.innerHTML) ** 2;
+  decideColor(+countNumber.innerHTML)
+};  
 
 // assign different colors
 function decideColor(num) {
@@ -44,8 +53,12 @@ function count(e) {
     case "btn-reset":
       reset();
       break;
+    case "btn-sq":
+      square();
+      break;
   }
 }
 
 // listen for a click
 btnContainer.addEventListener("click", count);
+sqNum.addEventListener("click", count);

@@ -60,7 +60,31 @@ body {
   letter-spacing: 2px;
 }
 
+.counter-wrapper .sq-btn-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.counter-wrapper .sq-btn-container .btn {
+  padding: 0.5rem 0.7rem;
+  color: #f1f5f8;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid #f1f5f8;
+  border-radius: 5px;
+  transition: background-color 0.5s;
+  letter-spacing: 2px;
+}
+
 .counter-wrapper .btn-container .btn:hover {
+  background-color: #ffffff;
+  color: #222222;
+}
+
+.counter-wrapper .sq-btn-container .btn:hover {
   background-color: #ffffff;
   color: #222222;
 }
